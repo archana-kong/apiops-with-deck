@@ -53,7 +53,7 @@ jobs:
 
       - name: Lint final file
         run: |
-          deck file lint -s lights/kong/.generated/kong.yaml \
+          deck file lint -s flights/kong/.generated/kong.yaml \
           flights/kong/ruleset.yaml; echo $?
 
       - name: Add environment Specific Patch
