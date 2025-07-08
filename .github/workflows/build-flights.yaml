@@ -33,8 +33,8 @@ jobs:
 
       - name: Add plugin configuration
         run: |
-          deck file add-plugins flights/kong/.generated/kong.yaml \
-          flights/kong/plugins.yaml --output flights/kong/.generated/kong.yaml 
+          deck file add-plugins -s flights/kong/.generated/kong.yaml \
+          flights/kong/plugins.yaml 
 
       - name: Add consumer configuration
         run: |  
