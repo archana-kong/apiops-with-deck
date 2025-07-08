@@ -2,7 +2,7 @@ name: Build Flights API - Generate Kong Configs
 
 on:
   workflow_dispatch:
-  # Run if someone pushes to the feature branch (during development)
+  # Run if someone pushes to the feature branch (during development).
   push:
     branches:
       - main
