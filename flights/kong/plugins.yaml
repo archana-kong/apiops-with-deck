@@ -1,0 +1,28 @@
+plugins:
+  - name: rate-limiting
+    config:
+      minute: 5
+      policy: local
+      
+  - name: key-auth
+    service: flights-service
+    config:
+      key_names:
+      - apikey
+
+  - name: proxy-cache-advanced
+    route: flights-service_get-flights
+    config:
+      response_code:
+      - 200
+      request_method:
+      - GET
+      - HEAD
+      content_type:
+      - text/plain
+      - application/json
+      cache_ttl: 300
+      strategy: memory
+      redis:
+        cluster_addresses: null
+        sentinel_addresses: null
