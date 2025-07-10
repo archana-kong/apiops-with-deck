@@ -24,6 +24,11 @@ consumers:
   - flight-data
   - flights
   username: jsmith1
+plugins:
+- config:
+    minute: 5
+    policy: local
+  name: rate-limiting
 services:
 - host: 10.68.87.27
   id: 0cef4d36-9c39-5ac2-9d9f-190d8ea8a252
