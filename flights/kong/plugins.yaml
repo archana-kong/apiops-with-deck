@@ -9,7 +9,7 @@ add-plugins:
 
   # Plugin for a specific service
   - selectors:
-      - $..services[?(@.name=="flights-service")]
+      - $.services[?(@.name=="flights-service")]
     overwrite: false
     plugins:
       - name: key-auth
@@ -19,7 +19,7 @@ add-plugins:
 
   #  Plugin for a specific route
   - selectors:
-      - $..routes[?(@.name=="flights-service_get-flights")]
+      - $.services[*].routes[?(@.name=="flights-service_get-flights")]
     overwrite: false
     plugins:
       - name: proxy-cache-advanced
