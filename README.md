@@ -1,6 +1,6 @@
 # 🚀 API Ops with decK
 
-This repository demonstrates a complete **API Ops** pipeline using [Kong](https://konghq.com) and [decK](https://deck.run). It includes OpenAPI-driven deployments, GitHub Actions automation, plugin management, and environment-safe GitOps practices.
+This repository demonstrates a complete **API Ops** pipeline using Kong and decK. It includes OpenAPI-driven deployments, GitHub Actions automation, plugin management, and environment-safe GitOps practices.
 
 ---
 
@@ -19,7 +19,7 @@ Think of it as *GitOps for your APIs* — reproducible, auditable, and automated
 
 ## 🔧 How decK Helps in API Ops?
 
-[decK](https://deck.run) is Kong's declarative configuration tool.
+decK is Kong's declarative configuration tool.
 decK communicates with Kong Gateway via the Admin API. 
 It enables:
 
@@ -136,5 +136,7 @@ You can view these underlying API requests/responses by appending the **--verbos
 
 ## decK useful links:
 [decK commands](https://developer.konghq.com/index/deck/#overview)
+
 [APIOPS Example](https://developer.konghq.com/deck/apiops/#an-apiops-example)
 
+---
