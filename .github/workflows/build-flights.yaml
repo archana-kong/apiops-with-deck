@@ -51,16 +51,16 @@ jobs:
           --selector "$.consumers[*]" \
           --output-file flights/kong/.generated/kong.yaml
 
-      - name: Lint final file
-        run: |
-          deck file lint -s flights/kong/.generated/kong.yaml \
-          flights/kong/ruleset.yaml; echo $?
-
       - name: Add environment Specific Patch
         run: |
           cat flights/kong/.generated/kong.yaml | \
           deck file patch flights/kong/patches.yaml \
           --output-file flights/kong/.generated/kong.yaml
+
+      - name: Lint final file
+        run: |
+          deck file lint -s flights/kong/.generated/kong.yaml \
+          flights/kong/ruleset.yaml; echo $?
 
       - name: Validate decK state file locally
         run: |
