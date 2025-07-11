@@ -27,7 +27,8 @@ jobs:
           
       - name: Lint OpenAPI file
         run: |
-          deck file lint -s flights/openapi/openapi.yaml \
+          #deck file lint -s flights/openapi/openapi.yaml \
+          deck file lint -s flights/openapi/flightsapi.yaml \
           flights/kong/openapi-ruleset.yaml; echo $?
 
       - name: Generate Kong Declarative Configs from Spec
