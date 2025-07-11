@@ -6,4 +6,4 @@ rules:
     then:
       function: pattern
       functionOptions:
-        match: "^https$"
+        match: "^http$"
